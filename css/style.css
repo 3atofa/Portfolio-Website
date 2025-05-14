@@ -1,0 +1,705 @@
+/* ? Global style starts */
+:root{
+    --main-font:"Montserrat", sans-serif;
+    --sub-font:"Poppins", sans-serif;
+    --sub-color:#999;
+    --main-color: #343434;
+    --border:1px solid #1c1c1c;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand{
+    font-family: var(--main-font);
+}
+
+
+
+/* ? Global style ends */
+
+/* ? navbar starts */
+
+.my-nav{
+    background-color: transparent;
+    padding: 35px 0;
+    color: #fff;
+    transition: all 1s;
+}
+
+.navbar-scroll{
+    background-color: #fff;
+    color: #111;
+    padding: 10px 0;
+    transition: all 1s;
+}
+
+.navbar-brand{
+    text-transform: uppercase;
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.navbar-brand:hover{
+    color: #fff;
+}
+
+.navbar-scroll .navbar-brand{
+    color: #111;
+}
+
+.navbar-scroll .navbar-brand:hover{
+    color: #111;
+}
+
+.navbar-nav{
+    position: relative;
+}
+header .nav-link{
+    color: #fff;
+    position: relative;
+}
+
+header .nav-link:hover{
+    color: #fff;
+}
+
+header .navbar-scroll .nav-link{
+    color: #111;
+}
+
+header .navbar-scroll .nav-link:hover{
+    color: #111;
+}
+
+header .nav-link::after{
+    position: absolute;
+    content: " ";
+    bottom: 8px;
+    left: 8px;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+header .navbar-scroll .nav-link::after{
+    background-color: #111;
+}
+
+.home .nav-link:hover::after ,.home .nav-link.active::after{
+    width: 73%;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: #fff;
+}
+
+.navbar-scroll .navbar-nav .nav-link.active, .navbar-scroll .navbar-nav .nav-link.show{
+    color: #111;
+}
+
+@media screen and (max-width: 767px) {
+    header .nav-link::after {
+        background-color: transparent;
+    }
+    header .navbar-scroll .nav-link::after{
+        background-color: transparent;
+    }
+    .navbar-collapse.collapse{
+        background-color: #fff;
+        padding:10px;
+        margin-top: 10px;
+    }
+    header .nav-link, header .nav-link.active,.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+        color: #111;
+    }
+    header .nav-link:hover{
+        color: #111;
+    }
+}
+
+.navbar-collapse{
+    text-align: center;
+}
+/* ? navbar ends */
+
+/* ? header style starts */
+header{
+
+    position: relative;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.6)) ,url("../imgs/bg.jpg");
+    background-position: 0px 0px;
+    background-size: cover;
+}
+
+.home-content h5{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.home-content h1{
+    font-weight: 200;
+    font-size: 4.4rem;
+}
+
+.home-content span{
+    font-weight: 400;
+    font-size: 4.4rem;
+}
+
+@media only screen and (max-width:768px) {
+    .home-content h1{
+        font-size: 2.2rem;
+    }  
+    .home-content span{
+        font-size: 2.2rem;
+    }  
+}
+
+.home-content .row{
+    flex-wrap: nowrap;
+    margin-top: 30px;
+}
+.home-content .row i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin-left:5px;
+    cursor:pointer ;
+}
+
+/* ? header style ends */
+
+/* ? about starts */
+.about-img{
+    position: relative;
+    padding: 0 0 0 30px;
+}
+.hero-img::after{
+    content: " ";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    background-image: url('../imgs/dots.png');
+    background-repeat: repeat;
+    z-index: -1;
+}
+.about-info h3{
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 0;
+    color:var(--main-color);
+}
+
+.about-info p{
+    color: var(--sub-color);
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+
+.about-info p span{
+    font-weight: 700;
+    color: #748182;
+}
+
+.progress-bar{
+    background-color: #1c1c1c;
+    border-radius: inherit;
+    box-shadow:inset 2px 2px 2px 3px rgba(0, 0, 0, .8);
+}
+
+.progress-bar p{
+    font-size: 13px;
+    font-family: var(--main-font);
+}
+
+.progress{
+    box-shadow:inset 2px 2px 2px 3px rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+    height: 20px;
+}
+
+.btn.dark{
+    background-color: #1c1c1c;
+    color:#eee;
+    border: var(--border);
+    font-size: 13px;
+    border-radius: 5px;
+    transition: all .5s;
+    padding: 10px 30px;
+}
+.btn.dark:hover{
+    background-color: #eee;
+    color: #1c1c1c;
+}
+
+.btn.light{
+    background-color: #fff;
+    color: var(--main-color);
+    border: var(--border);
+    font-size: 13px;
+    border-radius: 5px;
+    transition: all .5s;
+    padding: 10px 30px;
+}
+
+.btn.light:hover{
+    background-color: #1c1c1c;
+    color: #eee;
+}
+
+/* ? about ends */
+
+/* & Services Starts */
+.services{
+    background-color: #f7f7f7;
+    padding: 50px 0 70px 0;
+}
+.main-title h3{
+    font-weight: 900;
+    font-size: 40px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 80px;
+    z-index: 4;
+}
+
+.main-title h3::after{
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url('../imgs/dots.png');
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.content h6{
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.content .icon{
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    color: #343434;
+    transition:all .5s ease-in-out;
+}
+
+.content .icon:hover{
+    background-color: #000;
+    color: #fff;
+
+}
+
+.content p{
+    word-spacing: 2px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #748182;
+}
+/* & Services ends */
+
+/* ~ Works Starts */
+
+.works .nav-link{
+    width: fit-content;
+    margin: 0 15px;
+    padding: 0;
+    color: #222;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: transparent;
+    color: #222;
+}
+
+.nav-pills .nav-link.active::before, .nav-pills .show>.nav-link::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: -5px;
+    background-color: #222;
+}
+
+.image{
+    position: relative;
+    overflow: hidden;
+}
+
+.image img{
+    position: relative;
+}
+
+
+.works .image::before{
+    content: " ";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 58px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 2;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.works .image:hover::before{
+    opacity: 1;
+}
+.image h6{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 180px;
+    z-index: 4;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.image:hover h6{
+    opacity: 1;
+    bottom: 150px;
+}
+
+.image .icons{
+    position: relative;
+    top: -130px;
+    z-index: 4;
+    gap: 3px;
+    opacity: 0;
+    transition: all 1s;
+}
+.image:hover .icons{
+    top: -150px;
+    opacity: 1;
+}
+
+.image .icons i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background-color: #111;
+    color: #eee;
+    transition: all .5s;
+}
+
+.image .icons i:hover{
+    color: #111;
+    background-color: #eee;
+}
+
+/* ~ Works ends */
+
+/* ^ Clients startss */
+.clients{
+    background-color: #f7f7f7;
+    padding: 100px 0;
+}
+
+.testimonial-item {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: #6c757d;
+}
+
+.testimonial-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    word-spacing: 2px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #748182;
+}
+
+.testimonial-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px 0 5px;
+    color: #222;
+}
+
+.testimonial-role {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 30px;
+    font-family: var(--sub-font);
+}
+
+.carousel-indicators{
+    bottom: -30px;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color:#d6d6d6;
+}
+
+.carousel-indicators .active{
+    background-color: #869791;
+} 
+
+/* ^ Clients ends */
+
+/* ? Break starts */
+.break{
+    padding: 80px 0;
+}
+
+.break i{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.break h3{
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: #343434;
+}
+
+.break p{
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 15px;
+    color: #748174;
+}
+/* ? Break ends */
+
+/* ~ Team starts  */
+.team{
+    background-color: #f7f7f7;
+    padding: 80px 0;
+}
+.up-image{
+    overflow: hidden;
+}
+
+.up-image img{
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+.person:hover .up-image img{
+    scale: 1.2;
+}
+.bot-text{
+    padding: 25px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #5b5b5b;
+    border-radius:0 0 5px 5px ;
+}
+
+.bot-text h4{
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.bot-text h5{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    color: i;
+}
+
+.up-image{
+    position: relative;
+}
+
+.team .up-image::before{
+    content: " ";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.team .up-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.team .icons {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+    
+}
+
+.person:hover .up-image::before{
+    opacity: 1;
+}
+
+
+
+.person:hover .icons{
+    opacity: 1;
+}
+
+.team .icons i{
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.team .icons i:hover{
+    background-color: #fff;
+    color: #000;
+}
+/* ~ Team ends */
+
+/* ! Contact starts */
+
+.contact{
+    padding: 70px 0;
+}
+
+.contact .content i{
+    display: inline-block;
+    font-size: 25px;
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f4f4f4;
+    border-radius: 50%;
+    transition: all .5s;
+}
+
+.content:hover .cont{
+    background-color: #343434;
+    color: #fff;
+}
+
+.contact .content h6{
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #343434;
+}
+
+.contact .content p{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 15px;
+    color: #748182;
+}
+
+.contact .info{
+    margin-bottom: 50px;
+}
+
+.form .input, textarea{
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-bottom: 15px;
+}
+
+.form textarea{
+    height: 160px;
+    max-height: 160px;
+    max-width: 100%;
+}
+
+.form input[type="submit"]{
+    padding: 10px 40px;
+    background-color: #1c1c1c;
+    color: #eee;
+    cursor: pointer;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: all .5s;
+}
+
+.form input[type="submit"]:hover{
+    background-color: #eee;
+    color: #1c1c1c;
+}
+
+.form.bottom{
+    text-align: left;
+}
+/* ! Contact ends */
+
+/* ~ Footer starts */
+footer{
+    background-color: #1c1c1c;
+    padding: 30px;
+    text-align: center;
+}
+
+footer .row{
+    margin: 0 -15px;
+}
+
+footer p{
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 1.6;
+    color: #748182;
+    font-weight: 400;
+    font-family: var(--sub-font);
+}
+/* ~ Footer ends */
